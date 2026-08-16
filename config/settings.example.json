@@ -1,0 +1,45 @@
+{
+  "_comment": "Template for running against a real CRM. Copy to settings.json (gitignored) and fill in. Install the database extras first: pip install -e .[db]",
+
+  "live_data_dir": "C:/path/to/source/workbooks",
+  "output_dir": "C:/path/to/output",
+  "history_db_path": "C:/path/to/output/match_history.sqlite3",
+  "workbook_enabled": true,
+
+  "_db": "Password is never stored here. Set the named environment variable instead.",
+  "db": {
+    "host": "your-db-host",
+    "database": "your-database",
+    "schema": "public",
+    "user": "your-db-user",
+    "password_env_var": "MATCH_PIPELINE_DB_PASSWORD"
+  },
+
+  "_ssh": "Used to tunnel to the database. The host key must already be in your known_hosts; unknown keys are rejected.",
+  "ssh": {
+    "host": "your-bastion-host",
+    "user": "your-ssh-user",
+    "key_path": "C:/path/to/your/key.pem"
+  },
+
+  "_source_mappings": "Ties a workbook filename to a source. file_markers are matched case-insensitively as substrings of the filename.",
+  "source_mappings": [
+    { "source_name": "Example Source One", "source_code": "ONE", "file_markers": ["source-one", "s1"] },
+    { "source_name": "Example Source Two", "source_code": "TWO", "file_markers": ["source-two", "s2"] }
+  ],
+
+  "_thresholds": "Score bands. A pair must clear auto_accept_score AND beat the runner-up by min_score_gap to be auto-accepted; ambiguous pairs fall to review instead.",
+  "thresholds": {
+    "min_name_score": 55.0,
+    "min_candidate_score": 58.0,
+    "possible_score": 58.0,
+    "review_score": 60.0,
+    "auto_accept_score": 94.0,
+    "min_score_gap": 5.0,
+    "max_days_origination_before_lead": 30.0,
+    "ambiguous_gap": 2.0,
+    "max_review_rows": 20
+  },
+
+  "notifications": { "enabled": true }
+}

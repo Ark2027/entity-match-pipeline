@@ -1,0 +1,7 @@
+# Normalize all text files to LF in the repository.
+* text=auto eol=lf
+
+# Binary — never touch these.
+*.xlsx binary
+*.sqlite3 binary
+*.png binary

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "entity-match-pipeline"
+version = "1.0.0"
+description = "Reconciles business records between a spreadsheet and a CRM when there is no shared key, using explainable fuzzy matching with review bands."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Mark Pease" }]
+keywords = ["record-linkage", "fuzzy-matching", "entity-resolution", "data-pipeline", "reconciliation"]
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Database",
+]
+dependencies = [
+    "pandas>=2.0",
+    "openpyxl>=3.1",
+    "rapidfuzz>=3.0",
+]
+
+[project.optional-dependencies]
+# Only needed when pulling candidates from a live database. The demo runs
+# against fixtures without either of these installed.
+db = ["paramiko>=3.0", "psycopg[binary]>=3.1"]
+
+[project.urls]
+Repository = "https://github.com/Ark2027/entity-match-pipeline"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 140
+target-version = "py311"

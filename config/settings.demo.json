@@ -1,0 +1,30 @@
+{
+  "_comment": "Runs the pipeline end to end against the bundled fixtures. No database, no SSH, no credentials. Generate the fixtures first with: python scripts/generate_fixtures.py",
+
+  "live_data_dir": "fixtures/workbooks",
+  "candidates_csv": "fixtures/candidates.csv",
+  "output_dir": "output",
+  "history_db_path": "output/match_history.sqlite3",
+  "workbook_enabled": true,
+
+  "source_mappings": [
+    { "source_name": "Northwest Partners",      "source_code": "NWP", "file_markers": ["northwest"] },
+    { "source_name": "Great Lakes Collective",  "source_code": "GLC", "file_markers": ["great-lakes"] },
+    { "source_name": "Southwest Alliance",      "source_code": "SWA", "file_markers": ["southwest"] },
+    { "source_name": "Atlantic Community Fund", "source_code": "ACF", "file_markers": ["atlantic"] }
+  ],
+
+  "thresholds": {
+    "min_name_score": 55.0,
+    "min_candidate_score": 58.0,
+    "possible_score": 58.0,
+    "review_score": 60.0,
+    "auto_accept_score": 94.0,
+    "min_score_gap": 5.0,
+    "max_days_origination_before_lead": 30.0,
+    "ambiguous_gap": 2.0,
+    "max_review_rows": 20
+  },
+
+  "notifications": { "enabled": false }
+}

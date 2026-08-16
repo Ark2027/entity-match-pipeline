@@ -1,0 +1,35 @@
+# Real config and credentials — never commit these.
+config/settings.json
+config/*.secure.txt
+*.pem
+*.key
+.env
+.env.*
+
+# Run output and state. The demo writes here; none of it belongs in the repo.
+output/
+logs/
+backups/
+*.sqlite
+*.sqlite3
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# OS / editor / tooling
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*.xlsx
+.vscode/
+.idea/
+.claude/

@@ -1,0 +1,8 @@
+# Core dependencies. Enough to run the bundled demo against fixtures.
+pandas>=2.0
+openpyxl>=3.1
+rapidfuzz>=3.0
+
+# Pulling candidates from a live CRM additionally needs:
+#   pip install -e ".[db]"
+# which adds paramiko and psycopg. Not required for the demo.

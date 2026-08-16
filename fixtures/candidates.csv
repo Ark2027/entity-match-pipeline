@@ -1,0 +1,105 @@
+application_id,business_id,customer_id,candidate_source,candidate_source_name,application_status,loan_range,application_created_date,lead_start_date,crm_business_name,customer_first_name,customer_last_name,business_state,business_zip_code,prescreen_created_date,prescreen_first_name,prescreen_last_name,prescreen_state,prescreen_zip_code,prescreen_business_zip_code
+1001,501001,901001,NWP,Northwest Partners,IN_REVIEW,"$9,000 - $24,000",2026-01-16,2026-01-16,Ironwood Bakery,Dana,Ferrara,WA,47398,2026-01-16,Miguel,Novak,WA,47398,47398
+1002,501002,901002,NWP,Northwest Partners,APPROVED,"$15,000 - $40,000",2026-03-22,2026-03-22,Cedar Dental,Nadia,Ferrara,OR,63065,2026-03-22,Alice,Moreau,OR,63065,63065
+1003,501003,901003,NWP,Northwest Partners,APPROVED,"$24,000 - $64,000",2026-01-28,2026-01-28,Copper Upholstery,Ellis,Reyes,OR,37345,2026-01-28,Owen,Hale,OR,37345,37345
+1004,501004,901004,NWP,Northwest Partners,IN_REVIEW,"$9,000 - $24,000",2026-02-07,2026-02-07,Verdant Upholstery,Rosa,Baptiste,WA,96981,2026-02-07,Miguel,Baptiste,WA,96981,96981
+1005,501005,901005,NWP,Northwest Partners,IN_REVIEW,"$72,000 - $192,000",2026-02-15,2026-02-15,Lantern Bakery,Tomas,Novak,WA,67008,2026-02-15,Dana,Kaur,WA,67008,67008
+1006,501006,901006,NWP,Northwest Partners,IN_REVIEW,"$24,000 - $64,000",2026-01-01,2026-01-01,Kestrel Logistics,Owen,Novak,OR,15417,2026-01-01,Dana,Ferrara,OR,15417,15417
+1007,501007,901007,NWP,Northwest Partners,APPROVED,"$15,000 - $40,000",2026-02-26,2026-02-26,Foundry Bakery,Priya,Ferrara,WA,69138,2026-02-26,Rosa,Moreau,WA,69138,69138
+1008,501008,901008,NWP,Northwest Partners,IN_REVIEW,"$72,000 - $192,000",2026-01-09,2026-01-09,Meridian Automotive,Miguel,Moreau,WA,12647,2026-01-09,Joon,Moreau,WA,12647,12647
+1009,501009,901009,NWP,Northwest Partners,IN_REVIEW,"$45,000 - $120,000",2026-03-22,2026-03-22,Lantern Logistics,Priya,Lindqvist,WA,48585,2026-03-22,Rosa,Reyes,WA,48585,48585
+1010,501010,901010,NWP,Northwest Partners,APPROVED,"$24,000 - $64,000",2026-02-12,2026-02-12,Cedar Fitness,Owen,Lindqvist,WA,31087,2026-02-12,Owen,Moreau,WA,31087,31087
+1011,501011,901011,NWP,Northwest Partners,OPEN,"$72,000 - $192,000",2026-01-09,2026-01-09,Ironwood Automotive,Tomas,Moreau,WA,29473,2026-01-09,Ellis,Okafor,WA,29473,29473
+1012,501012,901012,NWP,Northwest Partners,OPEN,"$24,000 - $64,000",2026-01-22,2026-01-22,Kestrel Automotive,Ellis,Kaur,OR,95081,2026-01-22,Priya,Whitlock,OR,95081,95081
+1013,501013,901013,NWP,Northwest Partners,APPROVED,"$15,000 - $40,000",2026-03-13,2026-03-13,Copper Catering,Dana,Ferrara,OR,13139,2026-03-13,Dana,Hale,OR,13139,13139
+1014,501014,901014,NWP,Northwest Partners,OPEN,"$45,000 - $120,000",2026-01-06,2026-01-06,Kestrel Roofing,Dana,Reyes,OR,50517,2026-01-06,Ellis,Moreau,OR,50517,50517
+1015,501015,901015,NWP,Northwest Partners,IN_REVIEW,"$31,200 - $83,200",2026-03-09,2026-03-09,Harbor Point Marine LLC,Miguel,Reyes,OR,48201,2026-03-09,Miguel,Ferrara,OR,48201,48201
+1016,501016,901016,NWP,Northwest Partners,APPROVED,"$18,600 - $49,600",2026-01-30,2026-01-30,Kestrel Coffee Roasters,Alice,Baptiste,OR,48202,2026-01-30,Nadia,Hale,OR,48202,48202
+1017,501017,901017,NWP,Northwest Partners,APPROVED,"$40,800 - $108,800",2026-03-19,2026-03-19,Custom Cabinetry Ironwood,Dana,Whitlock,OR,48203,2026-03-19,Tomas,Hale,OR,48203,48203
+1018,501018,901018,NWP,Northwest Partners,IN_REVIEW,"$54,000 - $144,000",2026-03-06,2026-03-06,Meridian Freight Services,Dana,Moreau,OR,48204,2026-03-06,Miguel,Kaur,OR,48204,48204
+1019,501019,901019,NWP,Northwest Partners,APPROVED,"$54,000 - $144,000",2026-03-22,2026-03-22,Meridian Freight Services,Rosa,Novak,WA,77001,2026-03-22,Priya,Moreau,WA,77001,77001
+1020,501020,901020,NWP,Northwest Partners,OPEN,"$26,400 - $70,400",2026-02-10,2026-02-10,Capital Ventures Group,Ellis,Okafor,OR,48205,2026-02-10,Owen,Okafor,OR,48205,48205
+1021,501021,901021,NWP,Northwest Partners,IN_REVIEW,"$16,200 - $43,200",2026-02-19,2026-02-19,Lantern Street Bakery,Miguel,Hale,OR,48206,2026-02-19,Alice,Kaur,OR,48206,48206
+1022,501022,901022,GLC,Great Lakes Collective,APPROVED,"$9,000 - $24,000",2026-01-10,2026-01-10,Verdant Automotive,Priya,Novak,WI,45802,2026-01-10,Joon,Moreau,WI,45802,45802
+1023,501023,901023,GLC,Great Lakes Collective,IN_REVIEW,"$15,000 - $40,000",2026-02-08,2026-02-08,Verdant Catering,Rosa,Kaur,OH,95912,2026-02-08,Miguel,Whitlock,OH,95912,95912
+1024,501024,901024,GLC,Great Lakes Collective,APPROVED,"$45,000 - $120,000",2026-01-26,2026-01-26,Ironwood Fitness,Alice,Okafor,WI,98414,2026-01-26,Alice,Whitlock,WI,98414,98414
+1025,501025,901025,GLC,Great Lakes Collective,IN_REVIEW,"$72,000 - $192,000",2026-01-22,2026-01-22,Meridian Fitness,Dana,Baptiste,OH,13920,2026-01-22,Joon,Ferrara,OH,13920,13920
+1026,501026,901026,GLC,Great Lakes Collective,APPROVED,"$72,000 - $192,000",2026-01-02,2026-01-02,Ironwood Catering,Dana,Okafor,WI,76451,2026-01-02,Dana,Kaur,WI,76451,76451
+1027,501027,901027,GLC,Great Lakes Collective,APPROVED,"$72,000 - $192,000",2026-03-19,2026-03-19,Cedar Dental,Tomas,Moreau,WI,37939,2026-03-19,Priya,Novak,WI,37939,37939
+1028,501028,901028,GLC,Great Lakes Collective,OPEN,"$45,000 - $120,000",2026-02-05,2026-02-05,Verdant Dental,Joon,Kaur,WI,77432,2026-02-05,Ellis,Hale,WI,77432,77432
+1029,501029,901029,GLC,Great Lakes Collective,IN_REVIEW,"$9,000 - $24,000",2026-02-18,2026-02-18,Foundry Bakery,Dana,Lindqvist,OH,89139,2026-02-18,Owen,Okafor,OH,89139,89139
+1030,501030,901030,GLC,Great Lakes Collective,OPEN,"$72,000 - $192,000",2026-02-22,2026-02-22,Meridian Landscaping,Tomas,Kaur,WI,58183,2026-02-22,Owen,Kaur,WI,58183,58183
+1031,501031,901031,GLC,Great Lakes Collective,OPEN,"$24,000 - $64,000",2026-03-27,2026-03-27,Meridian Automotive,Dana,Lindqvist,WI,83387,2026-03-27,Priya,Lindqvist,WI,83387,83387
+1032,501032,901032,GLC,Great Lakes Collective,APPROVED,"$45,000 - $120,000",2026-02-07,2026-02-07,Kestrel Landscaping,Tomas,Baptiste,OH,45068,2026-02-07,Tomas,Kaur,OH,45068,45068
+1033,501033,901033,GLC,Great Lakes Collective,OPEN,"$24,000 - $64,000",2026-02-12,2026-02-12,Cedar Roofing,Priya,Lindqvist,WI,40271,2026-02-12,Priya,Moreau,WI,40271,40271
+1034,501034,901034,GLC,Great Lakes Collective,IN_REVIEW,"$15,000 - $40,000",2026-02-09,2026-02-09,Copper Bakery,Miguel,Hale,OH,34874,2026-02-09,Tomas,Baptiste,OH,34874,34874
+1035,501035,901035,GLC,Great Lakes Collective,IN_REVIEW,"$72,000 - $192,000",2026-02-21,2026-02-21,Harbor Catering,Joon,Ferrara,WI,73695,2026-02-21,Alice,Whitlock,WI,73695,73695
+1036,501036,901036,GLC,Great Lakes Collective,IN_REVIEW,"$31,200 - $83,200",2026-02-05,2026-02-05,Harbor Point Marine LLC,Ellis,Novak,WI,48201,2026-02-05,Nadia,Moreau,WI,48201,48201
+1037,501037,901037,GLC,Great Lakes Collective,OPEN,"$18,600 - $49,600",2026-03-09,2026-03-09,Kestrel Coffee Roasters,Nadia,Lindqvist,WI,48202,2026-03-09,Alice,Moreau,WI,48202,48202
+1038,501038,901038,GLC,Great Lakes Collective,APPROVED,"$40,800 - $108,800",2026-03-27,2026-03-27,Custom Cabinetry Ironwood,Ellis,Baptiste,WI,48203,2026-03-27,Ellis,Kaur,WI,48203,48203
+1039,501039,901039,GLC,Great Lakes Collective,IN_REVIEW,"$54,000 - $144,000",2026-02-05,2026-02-05,Meridian Freight Services,Joon,Hale,WI,48204,2026-02-05,Owen,Hale,WI,48204,48204
+1040,501040,901040,GLC,Great Lakes Collective,OPEN,"$54,000 - $144,000",2026-02-02,2026-02-02,Meridian Freight Services,Rosa,Kaur,OH,77001,2026-02-02,Rosa,Moreau,OH,77001,77001
+1041,501041,901041,GLC,Great Lakes Collective,APPROVED,"$26,400 - $70,400",2026-02-24,2026-02-24,Capital Ventures Group,Priya,Lindqvist,WI,48205,2026-02-24,Tomas,Baptiste,WI,48205,48205
+1042,501042,901042,GLC,Great Lakes Collective,APPROVED,"$16,200 - $43,200",2026-03-25,2026-03-25,Lantern Street Bakery,Nadia,Kaur,WI,48206,2026-03-25,Owen,Baptiste,WI,48206,48206
+1043,501043,901043,SWA,Southwest Alliance,IN_REVIEW,"$24,000 - $64,000",2026-01-17,2026-01-17,Foundry Logistics,Nadia,Whitlock,NM,45229,2026-01-17,Priya,Kaur,NM,45229,45229
+1044,501044,901044,SWA,Southwest Alliance,IN_REVIEW,"$72,000 - $192,000",2026-02-14,2026-02-14,Verdant Logistics,Nadia,Ferrara,AZ,65251,2026-02-14,Owen,Baptiste,AZ,65251,65251
+1045,501045,901045,SWA,Southwest Alliance,IN_REVIEW,"$24,000 - $64,000",2026-03-01,2026-03-01,Copper Roofing,Priya,Kaur,AZ,63050,2026-03-01,Priya,Baptiste,AZ,63050,63050
+1046,501046,901046,SWA,Southwest Alliance,OPEN,"$15,000 - $40,000",2026-03-23,2026-03-23,Foundry Dental,Ellis,Okafor,NM,15518,2026-03-23,Tomas,Ferrara,NM,15518,15518
+1047,501047,901047,SWA,Southwest Alliance,APPROVED,"$45,000 - $120,000",2026-02-08,2026-02-08,Kestrel Print Shop,Owen,Lindqvist,AZ,88662,2026-02-08,Joon,Lindqvist,AZ,88662,88662
+1048,501048,901048,SWA,Southwest Alliance,APPROVED,"$24,000 - $64,000",2026-01-15,2026-01-15,Ironwood Logistics,Joon,Reyes,AZ,77523,2026-01-15,Joon,Okafor,AZ,77523,77523
+1049,501049,901049,SWA,Southwest Alliance,APPROVED,"$45,000 - $120,000",2026-01-18,2026-01-18,Foundry Dental,Tomas,Kaur,NM,92199,2026-01-18,Rosa,Lindqvist,NM,92199,92199
+1050,501050,901050,SWA,Southwest Alliance,IN_REVIEW,"$24,000 - $64,000",2026-01-21,2026-01-21,Kestrel Roofing,Rosa,Ferrara,NM,95946,2026-01-21,Miguel,Kaur,NM,95946,95946
+1051,501051,901051,SWA,Southwest Alliance,APPROVED,"$9,000 - $24,000",2026-02-05,2026-02-05,Harbor Dental,Miguel,Hale,AZ,54464,2026-02-05,Ellis,Ferrara,AZ,54464,54464
+1052,501052,901052,SWA,Southwest Alliance,OPEN,"$15,000 - $40,000",2026-02-14,2026-02-14,Kestrel Catering,Dana,Okafor,NM,89430,2026-02-14,Nadia,Ferrara,NM,89430,89430
+1053,501053,901053,SWA,Southwest Alliance,APPROVED,"$72,000 - $192,000",2026-01-09,2026-01-09,Cedar Roofing,Tomas,Baptiste,NM,34343,2026-01-09,Owen,Lindqvist,NM,34343,34343
+1054,501054,901054,SWA,Southwest Alliance,APPROVED,"$72,000 - $192,000",2026-02-05,2026-02-05,Lantern Fitness,Joon,Okafor,NM,73851,2026-02-05,Alice,Novak,NM,73851,73851
+1055,501055,901055,SWA,Southwest Alliance,APPROVED,"$72,000 - $192,000",2026-02-06,2026-02-06,Lantern Print Shop,Owen,Whitlock,AZ,61502,2026-02-06,Rosa,Ferrara,AZ,61502,61502
+1056,501056,901056,SWA,Southwest Alliance,OPEN,"$24,000 - $64,000",2026-02-09,2026-02-09,Harbor Dental,Nadia,Novak,NM,24444,2026-02-09,Miguel,Whitlock,NM,24444,24444
+1057,501057,901057,SWA,Southwest Alliance,IN_REVIEW,"$31,200 - $83,200",2026-02-22,2026-02-22,Harbor Point Marine LLC,Alice,Reyes,AZ,48201,2026-02-22,Alice,Kaur,AZ,48201,48201
+1058,501058,901058,SWA,Southwest Alliance,IN_REVIEW,"$18,600 - $49,600",2026-03-03,2026-03-03,Kestrel Coffee Roasters,Tomas,Lindqvist,AZ,48202,2026-03-03,Tomas,Moreau,AZ,48202,48202
+1059,501059,901059,SWA,Southwest Alliance,IN_REVIEW,"$40,800 - $108,800",2026-01-14,2026-01-14,Custom Cabinetry Ironwood,Ellis,Kaur,AZ,48203,2026-01-14,Dana,Lindqvist,AZ,48203,48203
+1060,501060,901060,SWA,Southwest Alliance,IN_REVIEW,"$54,000 - $144,000",2026-02-26,2026-02-26,Meridian Freight Services,Joon,Baptiste,AZ,48204,2026-02-26,Joon,Hale,AZ,48204,48204
+1061,501061,901061,SWA,Southwest Alliance,IN_REVIEW,"$54,000 - $144,000",2026-03-21,2026-03-21,Meridian Freight Services,Miguel,Whitlock,NM,77001,2026-03-21,Owen,Reyes,NM,77001,77001
+1062,501062,901062,SWA,Southwest Alliance,APPROVED,"$26,400 - $70,400",2026-02-13,2026-02-13,Capital Ventures Group,Miguel,Moreau,AZ,48205,2026-02-13,Miguel,Moreau,AZ,48205,48205
+1063,501063,901063,SWA,Southwest Alliance,APPROVED,"$16,200 - $43,200",2026-02-04,2026-02-04,Lantern Street Bakery,Alice,Hale,AZ,48206,2026-02-04,Nadia,Hale,AZ,48206,48206
+1064,501064,901064,ACF,Atlantic Community Fund,APPROVED,"$72,000 - $192,000",2026-03-10,2026-03-10,Ironwood Fitness,Miguel,Ferrara,VA,26283,2026-03-10,Priya,Hale,VA,26283,26283
+1065,501065,901065,ACF,Atlantic Community Fund,IN_REVIEW,"$15,000 - $40,000",2026-02-12,2026-02-12,Kestrel Bakery,Joon,Kaur,VA,65413,2026-02-12,Miguel,Lindqvist,VA,65413,65413
+1066,501066,901066,ACF,Atlantic Community Fund,IN_REVIEW,"$72,000 - $192,000",2026-03-23,2026-03-23,Ironwood Upholstery,Rosa,Lindqvist,NC,55476,2026-03-23,Tomas,Whitlock,NC,55476,55476
+1067,501067,901067,ACF,Atlantic Community Fund,IN_REVIEW,"$72,000 - $192,000",2026-03-08,2026-03-08,Ironwood Catering,Dana,Reyes,VA,94106,2026-03-08,Dana,Hale,VA,94106,94106
+1068,501068,901068,ACF,Atlantic Community Fund,OPEN,"$24,000 - $64,000",2026-02-08,2026-02-08,Meridian Bakery,Dana,Ferrara,VA,93732,2026-02-08,Rosa,Whitlock,VA,93732,93732
+1069,501069,901069,ACF,Atlantic Community Fund,IN_REVIEW,"$15,000 - $40,000",2026-01-30,2026-01-30,Foundry Logistics,Rosa,Moreau,VA,93484,2026-01-30,Joon,Novak,VA,93484,93484
+1070,501070,901070,ACF,Atlantic Community Fund,OPEN,"$9,000 - $24,000",2026-01-09,2026-01-09,Cedar Bakery,Ellis,Okafor,VA,92478,2026-01-09,Owen,Hale,VA,92478,92478
+1071,501071,901071,ACF,Atlantic Community Fund,APPROVED,"$72,000 - $192,000",2026-03-05,2026-03-05,Ironwood Logistics,Dana,Reyes,NC,82395,2026-03-05,Joon,Baptiste,NC,82395,82395
+1072,501072,901072,ACF,Atlantic Community Fund,APPROVED,"$45,000 - $120,000",2026-02-24,2026-02-24,Lantern Catering,Rosa,Baptiste,VA,72779,2026-02-24,Ellis,Whitlock,VA,72779,72779
+1073,501073,901073,ACF,Atlantic Community Fund,APPROVED,"$9,000 - $24,000",2026-01-02,2026-01-02,Harbor Print Shop,Miguel,Ferrara,NC,53874,2026-01-02,Owen,Kaur,NC,53874,53874
+1074,501074,901074,ACF,Atlantic Community Fund,OPEN,"$72,000 - $192,000",2026-02-15,2026-02-15,Ironwood Bakery,Nadia,Kaur,NC,57277,2026-02-15,Joon,Lindqvist,NC,57277,57277
+1075,501075,901075,ACF,Atlantic Community Fund,OPEN,"$9,000 - $24,000",2026-01-14,2026-01-14,Kestrel Catering,Dana,Ferrara,NC,32194,2026-01-14,Nadia,Ferrara,NC,32194,32194
+1076,501076,901076,ACF,Atlantic Community Fund,OPEN,"$15,000 - $40,000",2026-01-11,2026-01-11,Ironwood Logistics,Owen,Okafor,NC,63131,2026-01-11,Ellis,Lindqvist,NC,63131,63131
+1077,501077,901077,ACF,Atlantic Community Fund,APPROVED,"$15,000 - $40,000",2026-02-06,2026-02-06,Cedar Dental,Dana,Lindqvist,VA,48835,2026-02-06,Rosa,Novak,VA,48835,48835
+1078,501078,901078,ACF,Atlantic Community Fund,OPEN,"$31,200 - $83,200",2026-03-11,2026-03-11,Harbor Point Marine LLC,Alice,Kaur,VA,48201,2026-03-11,Joon,Moreau,VA,48201,48201
+1079,501079,901079,ACF,Atlantic Community Fund,IN_REVIEW,"$18,600 - $49,600",2026-02-20,2026-02-20,Kestrel Coffee Roasters,Owen,Kaur,VA,48202,2026-02-20,Dana,Hale,VA,48202,48202
+1080,501080,901080,ACF,Atlantic Community Fund,APPROVED,"$40,800 - $108,800",2026-03-20,2026-03-20,Custom Cabinetry Ironwood,Joon,Whitlock,VA,48203,2026-03-20,Nadia,Kaur,VA,48203,48203
+1081,501081,901081,ACF,Atlantic Community Fund,APPROVED,"$54,000 - $144,000",2026-03-26,2026-03-26,Meridian Freight Services,Joon,Reyes,VA,48204,2026-03-26,Alice,Hale,VA,48204,48204
+1082,501082,901082,ACF,Atlantic Community Fund,IN_REVIEW,"$54,000 - $144,000",2026-03-27,2026-03-27,Meridian Freight Services,Ellis,Ferrara,NC,77001,2026-03-27,Owen,Baptiste,NC,77001,77001
+1083,501083,901083,ACF,Atlantic Community Fund,APPROVED,"$26,400 - $70,400",2026-01-30,2026-01-30,Capital Ventures Group,Joon,Moreau,VA,48205,2026-01-30,Joon,Whitlock,VA,48205,48205
+1084,501084,901084,ACF,Atlantic Community Fund,IN_REVIEW,"$16,200 - $43,200",2026-01-24,2026-01-24,Lantern Street Bakery,Nadia,Okafor,VA,48206,2026-01-24,Tomas,Baptiste,VA,48206,48206
+1085,501085,901085,ACF,Atlantic Community Fund,IN_REVIEW,"$36,600 - $97,600",2026-02-08,2026-02-08,Kestrel Catering,Rosa,Lindqvist,NC,11248,2026-02-08,Joon,Hale,NC,11248,11248
+1086,501086,901086,SWA,Southwest Alliance,APPROVED,"$10,800 - $28,800",2026-03-11,2026-03-11,Lantern Print Shop,Priya,Kaur,AZ,18169,2026-03-11,Alice,Whitlock,AZ,18169,18169
+1087,501087,901087,ACF,Atlantic Community Fund,OPEN,"$19,800 - $52,800",2026-01-18,2026-01-18,Ironwood Dental,Priya,Kaur,VA,46436,2026-01-18,Dana,Whitlock,VA,46436,46436
+1088,501088,901088,GLC,Great Lakes Collective,APPROVED,"$36,600 - $97,600",2026-02-28,2026-02-28,Ironwood Bakery,Alice,Ferrara,OH,52951,2026-02-28,Nadia,Kaur,OH,52951,52951
+1089,501089,901089,GLC,Great Lakes Collective,IN_REVIEW,"$36,600 - $97,600",2026-03-20,2026-03-20,Cedar Upholstery,Joon,Okafor,WI,79752,2026-03-20,Tomas,Okafor,WI,79752,79752
+1090,501090,901090,GLC,Great Lakes Collective,APPROVED,"$36,600 - $97,600",2026-02-28,2026-02-28,Lantern Dental,Rosa,Baptiste,WI,18102,2026-02-28,Nadia,Baptiste,WI,18102,18102
+1091,501091,901091,GLC,Great Lakes Collective,APPROVED,"$19,800 - $52,800",2026-03-24,2026-03-24,Verdant Fitness,Owen,Baptiste,WI,59118,2026-03-24,Joon,Lindqvist,WI,59118,59118
+1092,501092,901092,ACF,Atlantic Community Fund,APPROVED,"$36,600 - $97,600",2026-01-11,2026-01-11,Blue Ridge Logistics,Alice,Kaur,NC,10071,2026-01-11,Miguel,Okafor,NC,10071,10071
+1093,501093,901093,SWA,Southwest Alliance,OPEN,"$19,800 - $52,800",2026-02-23,2026-02-23,Kestrel Logistics,Priya,Okafor,AZ,78817,2026-02-23,Alice,Moreau,AZ,78817,78817
+1094,501094,901094,GLC,Great Lakes Collective,OPEN,"$10,800 - $28,800",2026-03-21,2026-03-21,Verdant Landscaping,Priya,Kaur,OH,47732,2026-03-21,Nadia,Moreau,OH,47732,47732
+1095,501095,901095,SWA,Southwest Alliance,OPEN,"$36,600 - $97,600",2026-01-06,2026-01-06,Lantern Dental,Nadia,Ferrara,AZ,93104,2026-01-06,Joon,Whitlock,AZ,93104,93104
+1096,501096,901096,GLC,Great Lakes Collective,IN_REVIEW,"$19,800 - $52,800",2026-02-08,2026-02-08,Verdant Automotive,Joon,Moreau,WI,59321,2026-02-08,Joon,Reyes,WI,59321,59321
+1097,501097,901097,ACF,Atlantic Community Fund,OPEN,"$19,800 - $52,800",2026-03-19,2026-03-19,Blue Ridge Roofing,Ellis,Kaur,NC,63182,2026-03-19,Dana,Okafor,NC,63182,63182
+1098,501098,901098,NWP,Northwest Partners,APPROVED,"$10,800 - $28,800",2026-03-11,2026-03-11,Lantern Upholstery,Rosa,Reyes,WA,79059,2026-03-11,Nadia,Kaur,WA,79059,79059
+1099,501099,901099,NWP,Northwest Partners,APPROVED,"$36,600 - $97,600",2026-03-20,2026-03-20,Cedar Dental,Owen,Hale,OR,58592,2026-03-20,Rosa,Ferrara,OR,58592,58592
+1100,501100,901100,NWP,Northwest Partners,IN_REVIEW,"$36,600 - $97,600",2026-02-28,2026-02-28,Kestrel Logistics,Tomas,Hale,WA,69356,2026-02-28,Dana,Lindqvist,WA,69356,69356
+1101,501101,901101,GLC,Great Lakes Collective,APPROVED,"$19,800 - $52,800",2026-02-11,2026-02-11,Foundry Catering,Joon,Ferrara,OH,49936,2026-02-11,Joon,Novak,OH,49936,49936
+1102,501102,901102,SWA,Southwest Alliance,IN_REVIEW,"$10,800 - $28,800",2026-02-05,2026-02-05,Blue Ridge Print Shop,Rosa,Baptiste,NM,79831,2026-02-05,Miguel,Lindqvist,NM,79831,79831
+1103,501103,901103,GLC,Great Lakes Collective,APPROVED,"$36,600 - $97,600",2026-02-23,2026-02-23,Copper Upholstery,Ellis,Lindqvist,WI,44247,2026-02-23,Ellis,Moreau,WI,44247,44247
+1104,501104,901104,ACF,Atlantic Community Fund,OPEN,"$10,800 - $28,800",2026-01-03,2026-01-03,Copper Automotive,Priya,Hale,VA,30863,2026-01-03,Tomas,Kaur,VA,30863,30863
