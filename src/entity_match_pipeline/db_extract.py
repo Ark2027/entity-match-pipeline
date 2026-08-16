@@ -17,6 +17,7 @@ Two deliberate choices worth noting:
 from __future__ import annotations
 
 import io
+import re
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -38,6 +39,22 @@ class RemotePsqlResult:
     exit_code: int
 
 
+_IDENTIFIER = re.compile(r"^[A-Za-z_][A-Za-z0-9_$]*$")
+
+
+def _validate_identifier(value: str, label: str) -> str:
+    """Reject anything that is not a plain SQL identifier.
+
+    The schema name is interpolated into the query because a schema cannot be a
+    bind parameter. Whoever edits settings.json already controls the machine, so
+    this is not the last line of defence, but interpolating an unchecked string
+    into SQL is worth refusing on principle.
+    """
+    if not _IDENTIFIER.match(value or ""):
+        raise ValueError(f"{label} must be a plain identifier, got {value!r}")
+    return value
+
+
 def _build_candidate_query(schema: str) -> str:
     """Candidate records eligible for matching.
 
@@ -45,6 +62,7 @@ def _build_candidate_query(schema: str) -> str:
     are referenced in the filter and the coalesce but are deliberately not
     returned, since nothing reads them.
     """
+    schema = _validate_identifier(schema, "db.schema")
     return f"""
 select distinct on (l.lead_id)
     l.lead_id                as application_id,
