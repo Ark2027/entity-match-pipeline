@@ -107,11 +107,31 @@ Candidates come over an SSH tunnel via `psql`. Two details in there that were fi
 - The database password is written to the remote shell's stdin rather than interpolated into the command string, because a command string is visible in `ps` on the remote host while it runs.
 - Host keys are verified against `known_hosts` and unknown ones are rejected. `AutoAddPolicy` trusts whatever answers, which defeats the point.
 
-## What's next
+## Adding a language model to the tail
 
-A v2 branch adds an LLM adjudicator over the review band only — the pairs the deterministic scorer declined to resolve. It never touches auto-accepts or discards. Since the fixtures carry known-correct pairings, it comes with an evaluation harness measuring accuracy on the ambiguous band, cost per adjudication, and how often it confidently resolves something that should have stayed unresolved.
+The scorer deliberately declines ambiguous pairs. That leaves a queue for a human, which is safe but not free. `llm_adjudicator.py` offers those deferrals to a model, which either picks a candidate or declines.
 
-The point of shipping v1 first is to have a baseline worth comparing against.
+It only ever sees the deferred band. It cannot touch an auto-accept and cannot resurrect a discard, so it can add automation without being able to damage decisions that were already made. A returned id that was never offered is treated as a refusal, and low confidence stays deferred.
+
+Measured against the same ground truth:
+
+| | deterministic | with adjudication |
+|---|---|---|
+| automation rate | 95.2% | **100%** |
+| automation precision | 100% | **100%** |
+| error rate | 0% | **0%** |
+| trap survival | 100% | **100%** |
+| deferred to a human | 8 | **4** |
+
+It resolved 4 of 8 deferrals, all correctly, and declined the other 4 — which were traps with no correct answer. About **$0.007 per adjudication**, on roughly 8% of records.
+
+```bash
+pip install -e ".[llm]"
+export ANTHROPIC_API_KEY=...
+python eval/run_adjudication.py
+```
+
+The evaluation is the point rather than the model call, and it earned its keep by finding two bugs — a tool schema with two fields encoding one fact, which made every adjudication silently decline, and ground truth that contradicted itself, which reported a model error that was mine. Both are written up in [`eval/results.md`](eval/results.md), along with what I would not claim from a sample this small.
 
 ## Limits
 

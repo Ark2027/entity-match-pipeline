@@ -112,6 +112,28 @@ def _pct(numerator: int, denominator: int) -> float:
     return round(100.0 * numerator / denominator, 1) if denominator else 0.0
 
 
+def _assert_keys_unique(truth: pd.DataFrame) -> None:
+    """Refuse to score against ground truth that contradicts itself.
+
+    Two rows sharing a key but expecting different answers make at least one of
+    them unanswerable, and the failure surfaces as a model error rather than a
+    broken fixture. An eval that does not validate its own inputs will happily
+    report a number that means nothing.
+    """
+    key_cols = ["source_code", "live_business_name", "state"]
+    duplicated = truth[truth.duplicated(key_cols, keep=False)]
+    if duplicated.empty:
+        return
+    lines = "\n".join(
+        f"    {r['source_code']} | {r['live_business_name']} | {r['state']} -> {r['expected_application_id']}"
+        for _, r in duplicated.sort_values(key_cols).iterrows()
+    )
+    raise ValueError(
+        f"Ground truth has {len(duplicated)} rows sharing a key with differing answers:\n{lines}\n"
+        "Regenerate the fixtures; these cases cannot be scored."
+    )
+
+
 def load_predictions(history_path: Path) -> dict[tuple[str, str, str], dict]:
     con = sqlite3.connect(history_path)
     con.row_factory = sqlite3.Row
@@ -130,21 +152,44 @@ def load_predictions(history_path: Path) -> dict[tuple[str, str, str], dict]:
     return predictions
 
 
-def evaluate(truth_path: Path, history_path: Path) -> Report:
+def evaluate(
+    truth_path: Path,
+    history_path: Path,
+    overlay: dict[tuple[str, str, str], dict] | None = None,
+) -> Report:
+    """Score decisions against ground truth.
+
+    `overlay` lets a second stage revise the outcome for specific records — used
+    by the adjudication run, where the model resolves some deferrals. An overlay
+    entry of {"resolved": True, "application_id": n} promotes a record to an
+    automated decision; {"resolved": False} leaves it deferred.
+    """
     truth = pd.read_csv(truth_path)
+    _assert_keys_unique(truth)
     predictions = load_predictions(history_path)
+    overlay = overlay or {}
     report = Report()
     for _, t in truth.iterrows():
         key = (str(t["source_code"]), str(t["live_business_name"]), str(t["state"]))
         expected = t["expected_application_id"]
         expected_id = None if pd.isna(expected) or str(expected).strip() == "" else int(expected)
         p = predictions.get(key)
+        predicted = int(p["candidate_application_id"]) if p and p["candidate_application_id"] else None
+        band = str(p["decision_band"]) if p else None
+
+        revision = overlay.get(key)
+        if revision is not None and band in DEFERRED_BANDS:
+            if revision.get("resolved"):
+                predicted = revision.get("application_id")
+                band = "auto_accept"  # promoted: now an automated decision, and judged as one
+            # An unresolved revision leaves the record deferred, as it was.
+
         report.outcomes.append(Outcome(
             key=key,
             case=str(t["case"]),
             expected=expected_id,
-            predicted=int(p["candidate_application_id"]) if p and p["candidate_application_id"] else None,
-            band=str(p["decision_band"]) if p else None,
+            predicted=predicted,
+            band=band,
             score=float(p["match_score"]) if p and p["match_score"] is not None else None,
             gap=float(p["score_gap"]) if p and p["score_gap"] is not None else None,
         ))

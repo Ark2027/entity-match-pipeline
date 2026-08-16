@@ -4,18 +4,17 @@
     "records": 92,
     "expecting_a_match": 84,
     "traps_expecting_none": 8,
-    "automated_decisions": 71,
-    "deferred_to_human": 17,
+    "automated_decisions": 80,
+    "deferred_to_human": 8,
     "automation_precision": 100.0,
-    "automation_rate": 84.5,
+    "automation_rate": 95.2,
     "error_rate": 0.0,
     "trap_survival": 100.0,
-    "human_queue": 17
+    "human_queue": 8
   },
   "counts": {
-    "resolved_correct": 71,
-    "deferred_correct": 11,
-    "deferred_wrong": 2,
+    "resolved_correct": 80,
+    "deferred_correct": 4,
     "correctly_abstained": 4,
     "deferred_trap": 4
   }

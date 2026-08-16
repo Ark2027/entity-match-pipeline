@@ -115,14 +115,35 @@ def build() -> None:
 
         # ---------------------------------------------------------------
         # Clean matches. Should be resolved without help.
+        #
+        # Names must be unique within a source and state. Two identically named
+        # businesses in the same place, each expecting a different candidate, is
+        # not a hard case — it is an unanswerable one, and it silently shows up
+        # in the results as a model error rather than a broken fixture.
+        # Reserved names are excluded so a generated business cannot collide
+        # with one of the deliberate cases below.
         # ---------------------------------------------------------------
-        for i in range(12):
+        reserved = {
+            "Harbor Point Marine", "Kestrel Coffee Roasters", "Custom Cabinetry Ironwood",
+            "Meridian Freight Services", "Cedar Ridge Bakery", "Cedar Ridge Bistro",
+            "Northwest Ironwood Supply", "Northwest Iron Works", "Foundry Works Group",
+            "Foundry Fitness", "Verdant Landscaping", "Verdant Landscape Design",
+            "Capital Ventures Group", "Blue Ridge Tannery", "Lantern Street Bakery",
+            "Copper Ridge Fitness",
+        }
+        used: set[str] = set()
+        made = 0
+        while made < 12:
             base = f"{b.rng.choice(HEAD)} {b.rng.choice(TAIL)}"
+            if base in used or base in reserved:
+                continue
+            used.add(base)
             zip_code = f"{b.rng.randint(10000, 99999)}"
             amount = b.rng.choice([15000, 25000, 40000, 75000, 120000])
-            row(f"{base} LLC", st, 3 + i, amount, zip_code)
+            row(f"{base} LLC", st, 3 + made, amount, zip_code)
             app = b.add_candidate(code, source_name, base, st, zip_code, amount)
             b.expect(code, f"{base} LLC", st, app, "clean")
+            made += 1
 
         # ---------------------------------------------------------------
         # Solvable by normalization alone.

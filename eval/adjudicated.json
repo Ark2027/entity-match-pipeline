@@ -1,0 +1,203 @@
+{
+  "baseline": {
+    "metrics": {
+      "records": 92,
+      "expecting_a_match": 84,
+      "traps_expecting_none": 8,
+      "automated_decisions": 80,
+      "deferred_to_human": 8,
+      "automation_precision": 100.0,
+      "automation_rate": 95.2,
+      "error_rate": 0.0,
+      "trap_survival": 100.0,
+      "human_queue": 8
+    },
+    "counts": {
+      "resolved_correct": 80,
+      "deferred_correct": 4,
+      "correctly_abstained": 4,
+      "deferred_trap": 4
+    }
+  },
+  "adjudicated": {
+    "metrics": {
+      "records": 92,
+      "expecting_a_match": 84,
+      "traps_expecting_none": 8,
+      "automated_decisions": 84,
+      "deferred_to_human": 4,
+      "automation_precision": 100.0,
+      "automation_rate": 100.0,
+      "error_rate": 0.0,
+      "trap_survival": 100.0,
+      "human_queue": 4
+    },
+    "counts": {
+      "resolved_correct": 84,
+      "correctly_abstained": 4,
+      "deferred_trap": 4
+    }
+  },
+  "usage": {
+    "in": 12110,
+    "out": 1408,
+    "ms": 20152,
+    "errors": 0,
+    "refusals": 4,
+    "resolved": 4
+  },
+  "decisions": [
+    {
+      "source_code": "ACF",
+      "live_business_name": "NW Ironwood Supply Co",
+      "state": "VA",
+      "offered": [
+        1101,
+        1090,
+        1096,
+        1102,
+        1085
+      ],
+      "resolved": true,
+      "application_id": 1101,
+      "confidence": "high",
+      "reasoning": "\"NW\" expands to \"Northwest\" and \"Ironwood Supply\" matches \"Northwest Ironwood Supply\" closely; same state, amount ($47,000) falls within the size band, and dates are plausible (lead created before report date).",
+      "refused_reason": "",
+      "error": "",
+      "latency_ms": 3414
+    },
+    {
+      "source_code": "GLC",
+      "live_business_name": "NW Ironwood Supply Co",
+      "state": "WI",
+      "offered": [
+        1047,
+        1032,
+        1029,
+        1042,
+        1048
+      ],
+      "resolved": true,
+      "application_id": 1047,
+      "confidence": "high",
+      "reasoning": "\"NW\" expands to \"Northwest\" and \"Ironwood Supply Co\" matches \"Ironwood Supply\" - same distinctive words, same state, amount ($47,000) falls within the size band, and lead date precedes the reported date plausibly.",
+      "refused_reason": "",
+      "error": "",
+      "latency_ms": 2422
+    },
+    {
+      "source_code": "NWP",
+      "live_business_name": "NW Ironwood Supply Co",
+      "state": "OR",
+      "offered": [
+        1020,
+        1001,
+        1015,
+        1021,
+        1006
+      ],
+      "resolved": true,
+      "application_id": 1020,
+      "confidence": "high",
+      "reasoning": "\"NW Ironwood Supply Co\" matches \"Northwest Ironwood Supply\" - NW/Northwest abbreviation and shared distinctive word \"Ironwood Supply\", same state OR, amount $47,000 falls within size band $28,200-$75,200, and date order is plausible.",
+      "refused_reason": "",
+      "error": "",
+      "latency_ms": 2345
+    },
+    {
+      "source_code": "SWA",
+      "live_business_name": "NW Ironwood Supply Co",
+      "state": "AZ",
+      "offered": [
+        1074,
+        1069,
+        1075,
+        1076,
+        1063
+      ],
+      "resolved": true,
+      "application_id": 1074,
+      "confidence": "high",
+      "reasoning": "\"NW Ironwood Supply Co\" matches \"Northwest Ironwood Supply\" with NW/Northwest being a standard abbreviation, same state, amount within size band, and plausible date order.",
+      "refused_reason": "",
+      "error": "",
+      "latency_ms": 2040
+    },
+    {
+      "source_code": "GLC",
+      "live_business_name": "Blue Ridge Tannery",
+      "state": "WI",
+      "offered": [
+        1116,
+        1034,
+        1045,
+        1046,
+        1030
+      ],
+      "resolved": false,
+      "application_id": null,
+      "confidence": "high",
+      "reasoning": "None of the candidates share the distinctive word \"Tannery\" or represent the same business type; \"Blue Ridge\" and \"Cedar Ridge\" are common geographic descriptors shared with unrelated industries (Dental, Automotive, Bakery, Bistro), indicating different businesses.",
+      "refused_reason": "model found no matching candidate",
+      "error": "",
+      "latency_ms": 2448
+    },
+    {
+      "source_code": "ACF",
+      "live_business_name": "Blue Ridge Tannery",
+      "state": "VA",
+      "offered": [
+        1087,
+        1099,
+        1100,
+        1085,
+        1084
+      ],
+      "resolved": false,
+      "application_id": null,
+      "confidence": "high",
+      "reasoning": "None of the candidates share the distinctive term \"Tannery\" or a clearly matching business identity; \"Blue Ridge Catering\" shares only the generic \"Blue Ridge\" geographic term but is a different business type, and other candidates (Cedar Ridge, Meridian) are unrelated names entirely.",
+      "refused_reason": "model found no matching candidate",
+      "error": "",
+      "latency_ms": 2343
+    },
+    {
+      "source_code": "SWA",
+      "live_business_name": "Blue Ridge Tannery",
+      "state": "AZ",
+      "offered": [
+        1062,
+        1072,
+        1073,
+        1112,
+        1070
+      ],
+      "resolved": false,
+      "application_id": null,
+      "confidence": "high",
+      "reasoning": "None of the candidates share the distinctive term \"Tannery\" or a matching business type; \"Blue Ridge Roofing\" shares only the generic \"Blue Ridge\" prefix but is a different industry, and the \"Cedar Ridge\" candidates are unrelated businesses (bakery/bistro). No sufficient evidence to match any candidate as the same business.",
+      "refused_reason": "model found no matching candidate",
+      "error": "",
+      "latency_ms": 2758
+    },
+    {
+      "source_code": "NWP",
+      "live_business_name": "Blue Ridge Tannery",
+      "state": "OR",
+      "offered": [
+        1010,
+        1011,
+        1018,
+        1019,
+        1009
+      ],
+      "resolved": false,
+      "application_id": null,
+      "confidence": "high",
+      "reasoning": "None of the candidates share the distinctive word \"Tannery\" or represent the same business type; \"Blue Ridge Roofing\" and \"Blue Ridge Landscaping\" only share the generic locational term \"Blue Ridge\" but differ in core business identity, and \"Cedar Ridge\" entries are a different name entirely.",
+      "refused_reason": "model found no matching candidate",
+      "error": "",
+      "latency_ms": 2382
+    }
+  ]
+}

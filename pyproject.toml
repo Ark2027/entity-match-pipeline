@@ -26,6 +26,9 @@ dependencies = [
 # Only needed when pulling candidates from a live database. The demo runs
 # against fixtures without either of these installed.
 db = ["paramiko>=3.0", "psycopg[binary]>=3.1"]
+# Only needed to run the LLM adjudicator. The pipeline, the tests and the
+# baseline evaluation all work without it.
+llm = ["anthropic>=0.40"]
 
 [project.urls]
 Repository = "https://github.com/Ark2027/entity-match-pipeline"
