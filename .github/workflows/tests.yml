@@ -1,0 +1,53 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      # Core dependencies only. The database and LLM extras are deliberately
+      # left out so this also proves the demo runs without them.
+      - name: Install
+        run: pip install -e .
+
+      - name: Unit tests
+        run: |
+          python tests/test_normalization.py
+          python tests/test_matching.py
+          python tests/test_adjudicator.py
+
+      # The README claims you can clone this and have it running in a few
+      # minutes with no database. This is what checks that claim is still true.
+      - name: Generate fixtures
+        run: python scripts/generate_fixtures.py
+
+      - name: End-to-end demo run
+        run: |
+          python run_matcher.py \
+            --config config/settings.demo.json \
+            --quarter 2026Q2 \
+            --rebuild-history \
+            --disable-notifications
+
+      - name: Evaluate against ground truth
+        run: python eval/run_eval.py
+
+      - name: Check the demo produced a review workbook
+        run: test -f output/match_review_current.xlsx
