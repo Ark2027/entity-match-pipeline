@@ -1,0 +1,93 @@
+source_code,live_business_name,state,expected_application_id,case
+NWP,Ironwood Bakery LLC,OR,1001,clean
+NWP,Cedar Fitness LLC,OR,1002,clean
+NWP,Harbor Print Shop LLC,OR,1003,clean
+NWP,Copper Bakery LLC,OR,1004,clean
+NWP,Copper Catering LLC,OR,1005,clean
+NWP,Copper Print Shop LLC,OR,1006,clean
+NWP,Copper Catering LLC,OR,1007,clean
+NWP,Harbor Bakery LLC,OR,1008,clean
+NWP,Verdant Print Shop LLC,OR,1009,clean
+NWP,Harbor Fitness LLC,OR,1010,clean
+NWP,Copper Upholstery LLC,OR,1011,clean
+NWP,Blue Ridge Catering LLC,OR,1012,clean
+NWP,"Harbor Point Marine, L.L.C.",OR,1013,legal_suffix
+NWP,Kestrel Holdings LLC dba Kestrel Coffee Roasters,OR,1014,dba
+NWP,Ironwood Custom Cabinetry,OR,1015,transposed
+NWP,Meridian Freight Services,OR,1016,cross_state
+NWP,Cedar Ridge Bakery & Cafe,OR,1018,ambiguous_sibling
+NWP,NW Ironwood Supply Co,OR,1020,ambiguous_abbreviation
+NWP,The Foundry Works,OR,1022,ambiguous_rename
+NWP,Verdent Landscaping,OR,1024,ambiguous_misspelling
+NWP,Capital Investment Group,OR,,stopword_trap
+NWP,Blue Ridge Tannery,OR,,no_counterpart
+NWP,Lantern Street Bakery LLC,OR,1027,duplicate
+GLC,Kestrel Bakery LLC,WI,1028,clean
+GLC,Ironwood Upholstery LLC,WI,1029,clean
+GLC,Blue Ridge Bakery LLC,WI,1030,clean
+GLC,Harbor Print Shop LLC,WI,1031,clean
+GLC,Foundry Landscaping LLC,WI,1032,clean
+GLC,Foundry Roofing LLC,WI,1033,clean
+GLC,Verdant Landscaping LLC,WI,1034,clean
+GLC,Meridian Landscaping LLC,WI,1035,clean
+GLC,Kestrel Print Shop LLC,WI,1036,clean
+GLC,Ironwood Roofing LLC,WI,1037,clean
+GLC,Foundry Fitness LLC,WI,1038,clean
+GLC,Kestrel Landscaping LLC,WI,1039,clean
+GLC,"Harbor Point Marine, L.L.C.",WI,1040,legal_suffix
+GLC,Kestrel Holdings LLC dba Kestrel Coffee Roasters,WI,1041,dba
+GLC,Ironwood Custom Cabinetry,WI,1042,transposed
+GLC,Meridian Freight Services,WI,1043,cross_state
+GLC,Cedar Ridge Bakery & Cafe,WI,1045,ambiguous_sibling
+GLC,NW Ironwood Supply Co,WI,1047,ambiguous_abbreviation
+GLC,The Foundry Works,WI,1049,ambiguous_rename
+GLC,Verdent Landscaping,WI,1051,ambiguous_misspelling
+GLC,Capital Investment Group,WI,,stopword_trap
+GLC,Blue Ridge Tannery,WI,,no_counterpart
+GLC,Lantern Street Bakery LLC,WI,1054,duplicate
+SWA,Blue Ridge Upholstery LLC,AZ,1055,clean
+SWA,Verdant Dental LLC,AZ,1056,clean
+SWA,Foundry Landscaping LLC,AZ,1057,clean
+SWA,Blue Ridge Roofing LLC,AZ,1058,clean
+SWA,Kestrel Upholstery LLC,AZ,1059,clean
+SWA,Verdant Dental LLC,AZ,1060,clean
+SWA,Foundry Fitness LLC,AZ,1061,clean
+SWA,Copper Roofing LLC,AZ,1062,clean
+SWA,Harbor Landscaping LLC,AZ,1063,clean
+SWA,Foundry Catering LLC,AZ,1064,clean
+SWA,Harbor Upholstery LLC,AZ,1065,clean
+SWA,Kestrel Dental LLC,AZ,1066,clean
+SWA,"Harbor Point Marine, L.L.C.",AZ,1067,legal_suffix
+SWA,Kestrel Holdings LLC dba Kestrel Coffee Roasters,AZ,1068,dba
+SWA,Ironwood Custom Cabinetry,AZ,1069,transposed
+SWA,Meridian Freight Services,AZ,1070,cross_state
+SWA,Cedar Ridge Bakery & Cafe,AZ,1072,ambiguous_sibling
+SWA,NW Ironwood Supply Co,AZ,1074,ambiguous_abbreviation
+SWA,The Foundry Works,AZ,1076,ambiguous_rename
+SWA,Verdent Landscaping,AZ,1078,ambiguous_misspelling
+SWA,Capital Investment Group,AZ,,stopword_trap
+SWA,Blue Ridge Tannery,AZ,,no_counterpart
+SWA,Lantern Street Bakery LLC,AZ,1081,duplicate
+ACF,Foundry Upholstery LLC,VA,1082,clean
+ACF,Harbor Dental LLC,VA,1083,clean
+ACF,Foundry Logistics LLC,VA,1084,clean
+ACF,Meridian Dental LLC,VA,1085,clean
+ACF,Meridian Upholstery LLC,VA,1086,clean
+ACF,Copper Bakery LLC,VA,1087,clean
+ACF,Blue Ridge Catering LLC,VA,1088,clean
+ACF,Kestrel Dental LLC,VA,1089,clean
+ACF,Meridian Print Shop LLC,VA,1090,clean
+ACF,Ironwood Upholstery LLC,VA,1091,clean
+ACF,Harbor Roofing LLC,VA,1092,clean
+ACF,Cedar Bakery LLC,VA,1093,clean
+ACF,"Harbor Point Marine, L.L.C.",VA,1094,legal_suffix
+ACF,Kestrel Holdings LLC dba Kestrel Coffee Roasters,VA,1095,dba
+ACF,Ironwood Custom Cabinetry,VA,1096,transposed
+ACF,Meridian Freight Services,VA,1097,cross_state
+ACF,Cedar Ridge Bakery & Cafe,VA,1099,ambiguous_sibling
+ACF,NW Ironwood Supply Co,VA,1101,ambiguous_abbreviation
+ACF,The Foundry Works,VA,1103,ambiguous_rename
+ACF,Verdent Landscaping,VA,1105,ambiguous_misspelling
+ACF,Capital Investment Group,VA,,stopword_trap
+ACF,Blue Ridge Tannery,VA,,no_counterpart
+ACF,Lantern Street Bakery LLC,VA,1108,duplicate
