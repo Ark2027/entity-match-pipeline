@@ -31,11 +31,12 @@ from entity_match_pipeline.settings import (  # noqa: E402
     resolve_source_mapping,
 )
 
-try:
-    from entity_match_pipeline.db_extract import _build_candidate_query, normalize_candidate_frame
-    HAS_DB_EXTRAS = True
-except ImportError:  # paramiko is an optional extra
-    HAS_DB_EXTRAS = False
+# These import cleanly without the database extras installed, which is itself
+# part of what is being asserted: the fixture path must not drag in paramiko.
+from entity_match_pipeline.db_extract import (  # noqa: E402
+    _build_candidate_query,
+    normalize_candidate_frame,
+)
 
 
 def _config(**overrides) -> AppConfig:
@@ -225,8 +226,14 @@ class OutputSafetyTests(unittest.TestCase):
         self.assertEqual(list(drop_sensitive_columns(frame).columns), ["crm_business_name", "match_score"])
 
 
-@unittest.skipUnless(HAS_DB_EXTRAS, "database extras not installed")
 class QuerySafetyTests(unittest.TestCase):
+    def test_module_imports_without_db_extras(self) -> None:
+        # Regression: db_extract used to import paramiko at module level, which
+        # meant the no-database demo path could not run without the db extras.
+        import entity_match_pipeline.db_extract as module
+
+        self.assertFalse(hasattr(module, "paramiko"), "paramiko must not be imported at module level")
+
     def test_query_selects_no_personal_columns(self) -> None:
         query = _build_candidate_query("public").lower()
         for banned in ("ssn", "email", "phone", "address_line", "date_of_birth"):

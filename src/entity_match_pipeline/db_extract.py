@@ -19,11 +19,16 @@ from __future__ import annotations
 import io
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Any
 
 import pandas as pd
-import paramiko
 
 from .settings import AppConfig
+
+# paramiko is deliberately NOT imported here. normalize_candidate_frame is used
+# by the fixture path, which needs no database at all, and a module-level import
+# would drag the SSH dependency into a demo that advertises not needing it. CI
+# caught exactly that, because it installs core dependencies only.
 
 
 @dataclass(frozen=True)
@@ -82,13 +87,20 @@ order by
 """
 
 
-def _connect(config: AppConfig) -> paramiko.SSHClient:
+def _connect(config: AppConfig) -> Any:
     """Open an SSH connection, verifying the host key.
 
     `AutoAddPolicy` silently trusts whatever key the far end presents, which
     defeats the point of host verification. This loads the system known_hosts
     and refuses anything unrecognised.
     """
+    try:
+        import paramiko
+    except ImportError as exc:  # pragma: no cover - depends on install extras
+        raise RuntimeError(
+            "Reading candidates from a database needs the db extras: pip install -e '.[db]'"
+        ) from exc
+
     key = paramiko.RSAKey.from_private_key_file(str(config.ssh.key_path))
     client = paramiko.SSHClient()
     known_hosts = Path.home() / ".ssh" / "known_hosts"
