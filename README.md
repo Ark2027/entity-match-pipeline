@@ -1,5 +1,7 @@
 # Entity Match Pipeline
 
+[![tests](https://github.com/Ark2027/entity-match-pipeline/actions/workflows/tests.yml/badge.svg)](https://github.com/Ark2027/entity-match-pipeline/actions/workflows/tests.yml)
+
 Reconciles business records between a spreadsheet and a CRM when the two have no key in common.
 
 The situation it was built for: partner organizations submit quarterly workbooks of loans they originated, and those same businesses may or may not exist in our CRM as leads we sent them. Nobody shares an ID. The names don't match — one side has `Harbor Point Marine, L.L.C.`, the other has `Harbor Point Marine LLC`, and sometimes the CRM only knows the trading name from a DBA. Reconciling a quarter by hand took about a day, and the answers weren't reproducible.
