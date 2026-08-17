@@ -21,13 +21,13 @@ python run_matcher.py --config config/settings.demo.json --quarter 2026Q2
 That produces `output/match_review_current.xlsx`. From the fixtures as committed:
 
 ```
-live rows in quarter        88
-collapsed review items      82
-CRM candidates             104
-auto-accepted               66
+live rows in quarter       100
+collapsed review items      96
+CRM candidates             128
+auto-accepted               80
 queued for review            8
 exceptions                  12
-duplicates collapsed         6
+duplicates collapsed         4
 ```
 
 The 8 in review are the interesting ones. Each scored 100 on name similarity but had a runner-up within 5 points, so the pipeline declined to pick and queued them instead.
@@ -94,7 +94,7 @@ python tests/test_normalization.py
 python tests/test_matching.py
 ```
 
-51 tests, standard library only. They cover name normalization, DBA splitting, the stopword guard, threshold banding, corroboration scoring, duplicate collapsing, quarter maths, and output safety.
+69 tests, standard library only. They cover name normalization, DBA splitting, the stopword guard, threshold banding, corroboration scoring, duplicate collapsing, quarter maths, and output safety.
 
 One of them earns its keep: `L.L.C.` used to normalize to three separate tokens `l l c`, which never matched the `llc` suffix entry. The end-to-end run hid it because a different variant happened to score well. The unit test didn't.
 
