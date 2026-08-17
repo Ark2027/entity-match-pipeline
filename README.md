@@ -4,7 +4,7 @@
 
 Reconciles business records between a spreadsheet and a CRM when the two have no key in common.
 
-The situation it was built for: partner organizations submit quarterly workbooks of loans they originated, and those same businesses may or may not exist in our CRM as leads we sent them. Nobody shares an ID. The names don't match — one side has `Harbor Point Marine, L.L.C.`, the other has `Harbor Point Marine LLC`, and sometimes the CRM only knows the trading name from a DBA. Reconciling a quarter by hand took about a day, and the answers weren't reproducible.
+The situation it was built for: partner organizations submit quarterly workbooks of loans they originated, and those same businesses may or may not exist in our CRM as leads we sent them. Nobody shares an ID. The names don't match. One side has `Harbor Point Marine, L.L.C.`, the other has `Harbor Point Marine LLC`, and sometimes the CRM only knows the trading name from a DBA. Reconciling a quarter by hand took about a day, and the answers weren't reproducible.
 
 This does it in about a second, and shows its working.
 
@@ -34,7 +34,7 @@ The 8 in review are the interesting ones. Each scored 100 on name similarity but
 
 ## How it decides
 
-**Block first.** Candidates are grouped by source and state, so a business in Oregon is never compared against one in Wisconsin. This is a hard filter, not a scoring penalty — it makes the search tractable and removes a whole class of wrong answers up front.
+**Block first.** Candidates are grouped by source and state, so a business in Oregon is never compared against one in Wisconsin. This is a hard filter, not a scoring penalty. It makes the search tractable and removes a whole class of wrong answers up front.
 
 **Build name variants.** Each name expands into several comparable forms: accents folded, punctuation removed, legal suffix stripped, DBA split into both sides, generic words dropped. `Kestrel Holdings LLC dba Kestrel Coffee Roasters` produces variants for both the holding company and the coffee roaster, because the CRM might know either.
 
@@ -79,13 +79,13 @@ Everything domain-specific lives in `config/settings.json`. `config/settings.exa
 
 Thresholds are worth tuning to your data. `auto_accept_score` sets how good a match must be, `min_score_gap` sets how much better than the runner-up, and `max_review_rows` caps what lands in front of a human per run.
 
-Source workbooks are identified by filename via `source_mappings` — a short code plus the markers that might appear in the filename, so `Q2-NORTHWEST-originations.xlsx` and `northwest_q2.xlsx` resolve to the same source.
+Source workbooks are identified by filename via `source_mappings`: a short code plus the markers that might appear in the filename, so `Q2-NORTHWEST-originations.xlsx` and `northwest_q2.xlsx` resolve to the same source.
 
 ## On data minimisation
 
 The candidate query selects only columns the matcher actually consumes. That sounds obvious, but the version this was generalized from pulled ten more, including a partial national ID field that nothing downstream ever read. If a column isn't scored, joined on, or shown to a reviewer, it shouldn't leave the database.
 
-Contact details are treated the same way. They aren't fetched, aren't stored in the match history, and `drop_sensitive_columns()` removes anything matching a personal-data pattern before a workbook is written. Hiding an Excel column is not redaction — it survives the file and one right-click reveals it.
+Contact details are treated the same way. They aren't fetched, aren't stored in the match history, and `drop_sensitive_columns()` removes anything matching a personal-data pattern before a workbook is written. Hiding an Excel column is not redaction. It survives the file and one right-click reveals it.
 
 ## Tests
 
@@ -125,7 +125,7 @@ Measured against the same ground truth:
 | trap survival | 100% | **100%** |
 | deferred to a human | 8 | **4** |
 
-It resolved 4 of 8 deferrals, all correctly, and declined the other 4 — which were traps with no correct answer. About **$0.007 per adjudication**, on roughly 8% of records.
+It resolved 4 of 8 deferrals, all correctly, and declined the other 4, which were traps with no correct answer. About **$0.007 per adjudication**, on roughly 8% of records.
 
 ```bash
 pip install -e ".[llm]"
@@ -133,7 +133,7 @@ export ANTHROPIC_API_KEY=...
 python eval/run_adjudication.py
 ```
 
-The evaluation is the point rather than the model call, and it earned its keep by finding two bugs — a tool schema with two fields encoding one fact, which made every adjudication silently decline, and ground truth that contradicted itself, which reported a model error that was mine. Both are written up in [`eval/results.md`](eval/results.md), along with what I would not claim from a sample this small.
+The evaluation is the point rather than the model call, and it earned its keep by finding two bugs. A tool schema with two fields encoding one fact made every adjudication silently decline, and ground truth that contradicted itself reported a model error that was mine. Both are written up in [`eval/results.md`](eval/results.md), along with what I would not claim from a sample this small.
 
 ## Limits
 
