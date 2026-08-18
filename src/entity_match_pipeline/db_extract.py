@@ -47,7 +47,7 @@ def _validate_identifier(value: str, label: str) -> str:
 
     The schema name is interpolated into the query because a schema cannot be a
     bind parameter. Whoever edits settings.json already controls the machine, so
-    this is not the last line of defence, but interpolating an unchecked string
+    this is not the last line of defense, but interpolating an unchecked string
     into SQL is worth refusing on principle.
     """
     if not _IDENTIFIER.match(value or ""):
@@ -110,7 +110,7 @@ def _connect(config: AppConfig) -> Any:
 
     `AutoAddPolicy` silently trusts whatever key the far end presents, which
     defeats the point of host verification. This loads the system known_hosts
-    and refuses anything unrecognised.
+    and refuses anything unrecognized.
     """
     try:
         import paramiko

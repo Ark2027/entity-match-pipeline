@@ -15,7 +15,7 @@ python eval/run_adjudication.py        # with the LLM, needs ANTHROPIC_API_KEY
 
 The deterministic matcher sorts every record into auto-accepted, deferred, or discarded. The LLM only ever sees the deferred band. It cannot touch an auto-accept and cannot resurrect a discard, so it can add automation but cannot damage decisions that were already made.
 
-92 labelled records. 84 have a correct answer; 8 are traps where the correct answer is "none of these", included specifically to see whether a model asked to find a match will invent one.
+92 labeled records. 84 have a correct answer; 8 are traps where the correct answer is "none of these", included specifically to see whether a model asked to find a match will invent one.
 
 ## Results
 
@@ -44,7 +44,7 @@ And on a trap:
 
 > "Blue Ridge" is a common geographic descriptor shared with candidates, but the distinctive business type words (Tannery vs Upholstery, Roofing, Bakery) differ entirely. No candidate shares the core distinctive identifier "Tannery".
 
-That second one is the behaviour worth having. It is the same reasoning the deterministic stopword guard implements by hand, arrived at independently.
+That second one is the behavior worth having. It is the same reasoning the deterministic stopword guard implements by hand, arrived at independently.
 
 ## The two bugs this found
 

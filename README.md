@@ -81,7 +81,7 @@ Thresholds are worth tuning to your data. `auto_accept_score` sets how good a ma
 
 Source workbooks are identified by filename via `source_mappings`: a short code plus the markers that might appear in the filename, so `Q2-NORTHWEST-originations.xlsx` and `northwest_q2.xlsx` resolve to the same source.
 
-## On data minimisation
+## On data minimization
 
 The candidate query selects only columns the matcher actually consumes. That sounds obvious, but the version this was generalized from pulled ten more, including a partial national ID field that nothing downstream ever read. If a column isn't scored, joined on, or shown to a reviewer, it shouldn't leave the database.
 

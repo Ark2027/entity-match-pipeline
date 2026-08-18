@@ -239,7 +239,7 @@ def build() -> None:
 
     truth = pd.DataFrame(b.truth)
     truth.to_csv(FIXTURES / "ground_truth.csv", index=False)
-    print(f"  fixtures/ground_truth.csv  ({len(truth)} labelled records)")
+    print(f"  fixtures/ground_truth.csv  ({len(truth)} labeled records)")
     print("\n  cases:")
     for case, n in truth["case"].value_counts().sort_index().items():
         print(f"    {case:<26} {n}")
