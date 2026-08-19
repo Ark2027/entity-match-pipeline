@@ -10,10 +10,21 @@ This does it in about a second, and shows its working.
 
 ## Try it without setting anything up
 
-No database, no credentials, no API keys. The bundled fixtures are fictional.
+Needs Python 3.11 or newer. No database, no credentials, no API keys — the bundled fixtures are fictional.
 
 ```bash
+git clone https://github.com/Ark2027/entity-match-pipeline
+cd entity-match-pipeline
+
+python -m venv .venv
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
+
 pip install -e .
+```
+
+Then build the fixtures and run a quarter:
+
+```bash
 python scripts/generate_fixtures.py
 python run_matcher.py --config config/settings.demo.json --quarter 2026Q2
 ```
